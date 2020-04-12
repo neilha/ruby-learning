@@ -12,6 +12,12 @@
 sudo apt update
 ```
 
+### Install dependencies required for Ruby
+
+```sh
+sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev
+```
+
 ### Use rbenv installer to install rbenv
 
 ```sh
@@ -53,6 +59,8 @@ Auditing installed plugins: OK
 
 NOTE: using rbenv-installer automatically installs [ruby-build](https://github.com/rbenv/ruby-build) which provides the `rbenv install` command
 
+## Usage 
+
 ### Use rbenv to install different versions of Ruby
 
 List the available versions of Ruby
@@ -66,3 +74,25 @@ Install a Ruby version
 ```sh
 rbenv install 2.7.1
 ```
+
+Check which versions of Ruby are installed (version with * next to it is currently active)
+
+```sh
+rbenv versions
+```
+
+Set the default (global) version of Ruby to use.  If this isnt set it will try to use `system` which looks for the sytem installed Ruby (detected by searching your `$PATH`)
+
+```sh
+rbenv global 2.7.1
+```
+
+`rbenv global` will report the currently configured global version
+
+Set a local version
+
+```sh
+rbenv local 2.6.6
+```
+
+This sets a local application specific version by writing the version name to a `.ruby-version` file in the current directory.
