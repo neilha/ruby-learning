@@ -17,6 +17,7 @@ sudo apt update
 ```sh
 sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev
 ```
+See [ruby-build wiki](https://github.com/rbenv/ruby-build/wiki#suggested-build-environment) for other versions of Ubuntu
 
 ### Use rbenv installer to install rbenv
 
